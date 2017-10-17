@@ -1,6 +1,7 @@
 # Map-TOC
 
 - This repo contains source code web mapping application featuring a table of content control (TOC) for ESRI JS API 4.x application.
+- The TOC control displays the application 2D map-view layers, renders layers legends, and allows toggling layers visibility.
 
 - To clone this repository into your local machine using the terminal (mac) or Gitbash (PC) 
 
