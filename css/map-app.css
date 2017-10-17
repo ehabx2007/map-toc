@@ -1,0 +1,317 @@
+﻿@font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Droid Sans'), local('DroidSans'), url(..//fonts/droid.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+#info {
+    background: #fff;
+    box-shadow: 0 0 5px #888;
+    left: 1em;
+    padding: 0.5em;
+    position: absolute;
+    top: 1em;
+    z-index: 40;
+}
+
+#search {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 13px;
+    left: 60px;
+}
+
+.sizer .actionsPane {
+    display: none;
+}
+
+.sizer .titlePane {
+    padding-bottom: 13px !important;
+}
+
+
+
+    .sizer .titlePane .title {
+        display: none;
+    }
+
+.esriPopup.light .titleButton.maximize {
+    display: none;
+}
+
+.esriPopup.light .esriPopupWrapper {
+    bottom: 45px !important;
+}
+
+.btn-home {
+    position: absolute;
+    z-index: 30;
+    top: 86px;
+    left: 5px;
+    border: 1px solid #57585A;
+    background-color: #FFF;
+    color: #4C4C4C;
+    font-size: 18pt;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.btn-hover {
+    background-color: #FFF;
+}
+
+    .btn-hover:hover {
+        background-color: #ddd;
+    }
+
+.map-toolbar {
+    text-align: center;
+}
+
+.bottom-tools {
+    position: absolute;
+    bottom: 10px;
+    width: 27%;
+    left:10px;
+}
+
+@media (max-width: 1910px) {
+    .bottom-tools {
+        width: 50%;
+    }
+}
+
+.bottom-tools > div > ul {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-style: solid;
+    border-color: #3c3c3c;
+    border-width: 1px;
+    border-radius: 7px;
+}
+
+.bottom-tools ul:first-child {
+    padding: 0px;
+    max-height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+li > ul {
+    padding-left: 22px;
+}
+
+.map-toolbar-container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+}
+
+.sub-map-tools {
+    text-align: right;
+}
+
+    .sub-map-tools > div {
+        margin-right: 15px;
+    }
+
+
+
+.map-layer ul li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.map-layer > ul > li {
+    border-color: rgba(172, 172, 172, 0.48);
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 10px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        display: none;
+    }
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: -6px;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 17px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+.legend-image {
+    padding: 0;
+    width: 20px;
+}
+
+.measure-tools {
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+
+.close-icon {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #337ab7;
+    cursor: pointer;
+}
+
+.bordered {
+    border-color: rgba(172, 172, 172, 0.48);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.select-assets-row {
+    margin-left: 16px;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+option[default] {
+    display: none;
+}
+
+.objects-list {
+    min-height: 160px;
+    max-height: 160px;
+    overflow-y: auto;
+    padding-left: 0;
+    font-size: 12px;
+}
+
+
+.attribute-value {
+    text-align: left !important;
+    font-weight: normal;
+}
+
+.pager-button {
+    font-weight: bold;
+}
+
+.btn-zoom {
+    position: absolute;
+    display: none;
+    font-size: 25px;
+    width: 38px;
+    right: 50px;
+    text-align: center;
+    float: right;
+    top: 125px;
+    cursor: pointer;
+}
+
+.row:hover .btn-zoom {
+    display: inline-block;
+}
+
+
+.arcgisSearch .searchGroup .searchInput {
+    width: 140px;
+}
+
+.layer-name {
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    padding: 0;
+    padding-left: 2px;
+}
+
+
+
+@media (min-width: 768px) {
+
+    .form-horizontal .control-label {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .form-horizontal .form-group {
+        margin-bottom: 3px;
+    }
+
+    .objects-list .control-label {
+        padding-left: 30px !important;
+    }
+}
+
+.btn-enabledTool:enabled {
+    color: red;
+}
+
+.div-shadow {
+    box-shadow: rgba(1, 5, 1, 0.25) 0px 1px 2px 3px
+}
+
+.bottom-widget {
+    background-color:rgba(252,252,252,0.66);
+}

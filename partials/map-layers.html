@@ -1,0 +1,46 @@
+﻿<div class="panel panel-default div-shadow bottom-widget">
+    <div class="panel-heading">
+        <span>Map Layers</span> 
+    </div>
+
+    
+    <div class="panel-body map-layer" style="padding-top: 2px;">
+    
+        <ul>
+            <li ng-repeat="data in tree" ng-include="'tree_item_renderer.html'" class="col-md-12"></li>
+        </ul>
+
+    </div>
+</div>
+
+<script type="text/ng-template" id="tree_item_renderer.html">
+
+
+    <input type="checkbox"
+           ng-checked="data.visible"
+           ng-show="data.hasCheckbox"
+           ng-disabled="!data.layerIsVisible"
+           ng-model="data.visible"
+           ng-change="checkboxChangeHandler(data)"
+           class="col-sm-1" />
+
+    <div class="col-sm-1" ng-show="data.nodes" style="padding: 0;width: 5%;">
+        <span class="fa fa-minus-square" style="color:maroon" ng-show="data.showSublayers" ng-click="data.showSublayers=false"></span>
+        <span class="fa fa-plus-square" style="color:green" ng-show="!data.showSublayers" ng-click="data.showSublayers=true"></span>
+    </div>
+
+    <img class="col-sm-1 legend-image"
+         ng-src="{{data.legendImgSrc}}"
+         ng-show="data.legendImgSrc" />
+
+
+    <span class="col-sm-8 layer-name" ng-show="data.name">{{data.name}}</span>
+
+    
+    <br />
+    <ul ng-show="data.showSublayers">
+        <li ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'" class="row"></li>
+    </ul>
+</script>
+
+
